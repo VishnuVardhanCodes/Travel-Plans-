@@ -23,7 +23,7 @@ import {
 } from "@mui/material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutlined";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import GoogleIcon from "@mui/icons-material/Google";
