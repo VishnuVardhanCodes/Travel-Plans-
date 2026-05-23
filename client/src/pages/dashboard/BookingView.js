@@ -400,18 +400,14 @@ const BookingView = () => {
                       color="primary"
                       sx={{ borderRadius: 3 }}
                       onClick={() => {
-                        // Format date from YYYY-MM-DD to DDMMYYYY for MakeMyTrip
-                        const [year, month, day] =
-                          flight.departureDate.split("-");
-                        const formattedDate = `${day}${month}${year}`;
-
                         const origin = flight.origin.trim();
                         const destination = flight.destination.trim();
+                        const date = flight.departureDate; // YYYY-MM-DD
 
-                        // MakeMyTrip URL with all details pre-filled
-                        const url = `https://www.makemytrip.com/flight/search?tripType=O&itinerary=${origin}-${destination}-${formattedDate}&paxType=A-1_C-0_I-0&cabinClass=E&sTime=${Date.now()}&forwardFlowRequired=true`;
+                        // Google Flights works with city names directly
+                        const url = `https://www.google.com/travel/flights?q=flights+from+${encodeURIComponent(origin)}+to+${encodeURIComponent(destination)}+on+${date}`;
 
-                        // Open in new tab so user doesn't lose search
+                        // Open in new tab
                         window.open(url, "_blank");
                       }}
                     >
