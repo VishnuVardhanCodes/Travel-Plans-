@@ -38,6 +38,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import LuggageIcon from "@mui/icons-material/Luggage";
 import ShieldIcon from "@mui/icons-material/Shield";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 
 import { logout } from "../redux/actions/authActions";
 
@@ -52,6 +53,7 @@ import ProfileView from "./dashboard/ProfileView";
 import TripDetail from "./dashboard/TripDetail";
 import PackingView from "./dashboard/PackingView";
 import CultureSafetyAlerts from "./dashboard/CultureSafetyAlerts";
+import AchievementsView from "./dashboard/AchievementsView";
 
 const drawerWidth = 280;
 
@@ -121,6 +123,7 @@ const Dashboard = () => {
     { text: "Bookings", path: "bookings", icon: <HotelIcon /> },
     { text: "Packing", path: "packing", icon: <LuggageIcon /> },
     { text: "Safety & Culture", path: "culture-safety", icon: <ShieldIcon /> },
+    { text: "Achievements", path: "achievements", icon: <EmojiEventsIcon /> },
   ];
 
   const isActive = (path) => {
@@ -488,6 +491,7 @@ const Dashboard = () => {
             <Route path="profile" element={<ProfileView />} />
             <Route path="packing" element={<PackingView />} />
             <Route path="culture-safety" element={<CultureSafetyAlerts />} />
+            <Route path="achievements" element={<AchievementsView />} />
           </Routes>
         </Box>
       </Box>

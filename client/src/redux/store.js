@@ -8,6 +8,8 @@ import translatorReducer from "./reducers/translatorReducer";
 import bookingReducer from "./reducers/bookingReducer";
 import packingReducer from "./reducers/packingReducer";
 import budgetReducer from "./reducers/budgetReducer";
+import achievementReducer from "./reducers/achievementReducer";
+
 const rootReducer = combineReducers({
   auth: authReducer,
   trips: tripReducer,
@@ -17,8 +19,10 @@ const rootReducer = combineReducers({
   booking: bookingReducer,
   packing: packingReducer,
   budget: budgetReducer,
+  achievements: achievementReducer,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;
+
